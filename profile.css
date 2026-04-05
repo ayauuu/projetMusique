@@ -153,10 +153,11 @@
 .genre-list {
   display: flex; flex-direction: column; gap: .65rem;
   margin-top: .4rem;
+  
 }
 
 .genre-bar-item {
-  display: flex; align-items: center; gap: .6rem;
+  display: flex ; align-items: center; gap: .6rem;
 }
 .genre-name {
   font-size: .75rem;
