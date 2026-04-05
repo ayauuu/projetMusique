@@ -1,0 +1,113 @@
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--footer);
+  padding: .6rem 1.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: .1em;
+  color: #fff;
+}
+
+/* ── CHARTS LAYOUT ── */
+.charts-wrap {
+  padding: 1.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: .5rem;
+}
+
+/* ── SEARCH BAR ── */
+.search-wrap {
+  display: flex; gap: .5rem;
+  margin-bottom: 1.2rem;
+}
+.search-input {
+  flex: 1;
+  padding: .5rem .9rem;
+  border: 2px solid var(--lime);
+  border-radius: 999px;
+  background: var(--surface2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .85rem;
+  color: var(--text);
+  outline: none;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-btn {
+  padding: .5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ── FILTER TABS ── */
+.filter-tabs {
+  display: flex; gap: .5rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  border: 2px solid var(--lime);
+  background: transparent;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.tab-btn.active, .tab-btn:hover { background: var(--lime); color: #fff; }
+
+/* ── CHART LIST ── */
+.top-chart-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+
+.top-chart-item {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  background: #8ed630; /* Ton vert lime */
+  border: 2px solid #6ab820;
+  cursor: pointer;
+  transition: transform .18s;
+  animation: fadeUp .4s ease both;
+}
+.top-chart-item:hover { transform: translateX(6px); }
+.top-chart-item.playing { border-color: var(--accent); background: #fff; }
+
+.top-rank {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  min-width: 1.8rem;
+  text-align: center;
+}
+.top-rank.gold   { color: #b8860b; }
+.top-rank.silver { color: #777; }
+.top-rank.bronze { color: #8b4513; }
+
+.top-track-info { flex: 1; }
+.top-track-title { font-weight: 700; font-size: .92rem; }
+.top-track-artist { font-size: .75rem; opacity: 0.8; }
+
+.top-score {
+  font-size: .82rem;
+  font-weight: 700;
+  color: #1a6fcc;
+  display: flex; align-items: center; gap: .2rem;
+}
+.trend {
+  font-size: .68rem;
+  font-weight: 700;
+  padding: .15rem .45rem;
+  border-radius: 6px;
+  background: rgba(255,255,255,.4);
+}

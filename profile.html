@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EnsiBeats – Mon Profil</title>
+  <!-- Shared base styles -->
+  <link rel="stylesheet" href="music.css" />
+  <!-- Profile-only overrides -->
+  <link rel="stylesheet" href="profil.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR — reuses nav / .logo / .nav-links from music.css -->
+  <nav>
+    <div class="logo">ENSIBEATS</div>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="discover.html">DISCOVER</a></li>
+      <li><a href="charts.html">CHARTS</a></li>
+      <li><a href="pole.html">PÔLE</a></li>
+      <li><a href="profil.html" class="active">MON PROFIL</a></li>
+    </ul>
+  </nav>
+
+  <!-- Subheader — reuses .subheader from music.css -->
+  <div class="subheader">CAMPUSBEATS – MON PROFIL</div>
+
+  <main class="profile-main">
+
+    <!-- PROFILE CARD -->
+    <section class="card profile-card">
+      <div class="avatar-wrap">
+        <div class="avatar">🎧</div>
+        <div class="avatar-badge">✨</div>
+      </div>
+      <div class="profile-info">
+        <!-- reuses .card-title from music.css -->
+        <h1 class="card-title">Alex Dupont</h1>
+        <p class="profile-handle">@alexdup · ENSI Tunis · Promo 2025</p>
+        <div class="profile-tags">
+          <span class="tag tag-pop">Pop</span>
+          <span class="tag tag-rnb">R&amp;B</span>
+          <span class="tag tag-electro">Électro</span>
+        </div>
+      </div>
+      <a href="profil.html" class="vote-submit btn-edit">✏️ Modifier</a>
+    </section>
+
+    <!-- STATS ROW -->
+    <section class="stats-row">
+      <div class="card stat-card">
+        <div class="stat-value">47</div>
+        <div class="stat-label">🗳️ Votes donnés</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-value">12</div>
+        <div class="stat-label">🎵 Chansons proposées</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-value">3</div>
+        <div class="stat-label">🏆 Pôles gagnés</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-value">#8</div>
+        <div class="stat-label">📊 Rang du campus</div>
+      </div>
+    </section>
+
+    <!-- EDIT FORM -->
+    <section class="card">
+      <!-- reuses .card-title from music.css -->
+      <h2 class="card-title">⚙️ Modifier mon profil</h2>
+      <p class="section-sub">Mets à jour tes informations et tes préférences musicales.</p>
+
+      <form class="edit-form" method="GET" action="profil.html">
+
+        <div class="form-group">
+          <label class="form-label" for="username">Nom d'utilisateur</label>
+          <!-- reuses .chart-item look via .form-input -->
+          <input type="text" id="username" name="username" class="form-input" value="Alex Dupont" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="handle">Identifiant (@)</label>
+          <input type="text" id="handle" name="handle" class="form-input" value="@alexdup" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="promo">Promotion</label>
+          <select id="promo" name="promo" class="form-input">
+            <option>Promo 2025</option>
+            <option>Promo 2026</option>
+            <option>Promo 2027</option>
+            <option>Promo 2028</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Genres préférés</label>
+          <div class="genre-picker">
+
+            <input type="checkbox" id="g-pop"    name="genre" class="genre-check" checked />
+            <label for="g-pop"    class="genre-label">🎤 Pop</label>
+
+            <input type="checkbox" id="g-rnb"    name="genre" class="genre-check" checked />
+            <label for="g-rnb"    class="genre-label">🎙️ R&amp;B</label>
+
+            <input type="checkbox" id="g-electro" name="genre" class="genre-check" checked />
+            <label for="g-electro" class="genre-label">🎧 Électro</label>
+
+            <input type="checkbox" id="g-rock"   name="genre" class="genre-check" />
+            <label for="g-rock"   class="genre-label">🎸 Rock</label>
+
+            <input type="checkbox" id="g-jazz"   name="genre" class="genre-check" />
+            <label for="g-jazz"   class="genre-label">🎷 Jazz</label>
+
+            <input type="checkbox" id="g-afro"   name="genre" class="genre-check" />
+            <label for="g-afro"   class="genre-label">🥁 Afrobeat</label>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="bio">Bio</label>
+          <textarea id="bio" name="bio" class="form-input form-textarea">Passionné de musique, toujours à la recherche de nouveaux sons 🎵</textarea>
+        </div>
+
+        <div class="form-actions">
+          <!-- reuses .vote-submit from music.css -->
+          <button type="submit" class="vote-submit">💾 Sauvegarder</button>
+          <a href="profil.html" class="btn-cancel">Annuler</a>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- VOTE HISTORY — reuses .chart-list / .chart-item / .track-info from music.css -->
+    <section class="card">
+      <h2 class="card-title">🗳️ Mes votes récents</h2>
+      <p class="section-sub">Les chansons pour lesquelles tu as voté cette semaine.</p>
+
+      <ul class="chart-list">
+        <li class="chart-item">
+          <span class="rank">Auj.</span>
+          <div class="track-info">
+            <div class="track-title">🌸 Flowers</div>
+            <div class="track-artist">Miley Cyrus</div>
+          </div>
+          <span class="vote-option-tag">pop</span>
+        </li>
+        <li class="chart-item">
+          <span class="rank">Ven.</span>
+          <div class="track-info">
+            <div class="track-title">🦸 Anti-Hero</div>
+            <div class="track-artist">Taylor Swift</div>
+          </div>
+          <span class="vote-option-tag">pop</span>
+        </li>
+        <li class="chart-item">
+          <span class="rank">Jeu.</span>
+          <div class="track-info">
+            <div class="track-title">🎧 Blinding Lights</div>
+            <div class="track-artist">The Weeknd</div>
+          </div>
+          <span class="vote-option-tag">rnb</span>
+        </li>
+        <li class="chart-item">
+          <span class="rank">Mer.</span>
+          <div class="track-info">
+            <div class="track-title">🌊 As It Was</div>
+            <div class="track-artist">Harry Styles</div>
+          </div>
+          <span class="vote-option-tag">pop</span>
+        </li>
+        <li class="chart-item">
+          <span class="rank">Mar.</span>
+          <div class="track-info">
+            <div class="track-title">🎵 Levitating</div>
+            <div class="track-artist">Dua Lipa</div>
+          </div>
+          <span class="vote-option-tag">pop</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PROPOSALS — reuses .vote-option from music.css -->
+    <section class="card">
+      <h2 class="card-title">🎵 Mes propositions</h2>
+      <p class="section-sub">Les chansons que tu as soumises pour le pôle.</p>
+
+      <div class="proposals-list">
+
+        <div class="vote-option proposal-accepted">
+          <div class="track-info">
+            <div class="track-title">🌟 Golden Hour · JVKE</div>
+            <div class="track-artist">pop · proposée il y a 2 jours</div>
+          </div>
+          <span class="status-badge status-ok">✅ Acceptée</span>
+        </div>
+
+        <div class="vote-option proposal-pending">
+          <div class="track-info">
+            <div class="track-title">🎸 Running Up That Hill · Kate Bush</div>
+            <div class="track-artist">rock · proposée hier</div>
+          </div>
+          <span class="status-badge status-pending">⏳ En attente</span>
+        </div>
+
+        <div class="vote-option proposal-pending">
+          <div class="track-info">
+            <div class="track-title">🎧 Midnight Rain · Taylor Swift</div>
+            <div class="track-artist">pop · proposée aujourd'hui</div>
+          </div>
+          <span class="status-badge status-pending">⏳ En attente</span>
+        </div>
+
+        <div class="vote-option proposal-refused">
+          <div class="track-info">
+            <div class="track-title">🎵 Blacker the Berry · Kendrick</div>
+            <div class="track-artist">rnb · proposée il y a 5 jours</div>
+          </div>
+          <span class="status-badge status-no">❌ Refusée</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BADGES -->
+    <section class="card">
+      <h2 class="card-title">🏅 Mes badges</h2>
+      <p class="section-sub">Débloque des badges en participant à la vie musicale du campus.</p>
+
+      <div class="badges-grid">
+
+        <div class="badge-card badge-unlocked">
+          <div class="badge-icon">🎵</div>
+          <div class="badge-name">Premier vote</div>
+          <div class="badge-desc">Tu as voté pour la première fois !</div>
+        </div>
+
+        <div class="badge-card badge-unlocked">
+          <div class="badge-icon">🔥</div>
+          <div class="badge-name">7 jours de suite</div>
+          <div class="badge-desc">Voter 7 jours consécutifs</div>
+        </div>
+
+        <div class="badge-card badge-unlocked">
+          <div class="badge-icon">🏆</div>
+          <div class="badge-name">Chanson gagnante</div>
+          <div class="badge-desc">Ta proposition a gagné le pôle</div>
+        </div>
+
+        <div class="badge-card badge-locked">
+          <div class="badge-icon">⭐</div>
+          <div class="badge-name">Top Votant</div>
+          <div class="badge-desc">50 votes donnés au total</div>
+        </div>
+
+        <div class="badge-card badge-locked">
+          <div class="badge-icon">🎤</div>
+          <div class="badge-name">Découvreur</div>
+          <div class="badge-desc">Proposer 20 chansons</div>
+        </div>
+
+        <div class="badge-card badge-locked">
+          <div class="badge-icon">👑</div>
+          <div class="badge-name">Légende ENSI</div>
+          <div class="badge-desc">Atteindre le rang #1 du campus</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>EnsiBeats</strong> · La musique de l'ENSI 🎵
+  </footer>
+
+</body>
+</html>
