@@ -3,281 +3,267 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EnsiBeats – Mon Profil</title>
-  <!-- Shared base styles -->
-  <link rel="stylesheet" href="music.css" />
-  <!-- Profile-only overrides -->
-  <link rel="stylesheet" href="profil.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <title>EnsiBeats — Mon Profil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="music.css"/>
+  <link rel="stylesheet" href="profile.css"/>
 </head>
 <body>
 
-  <!-- NAVBAR — reuses nav / .logo / .nav-links from music.css -->
+  <!-- NAV -->
   <nav>
-    <div class="logo">ENSIBEATS</div>
+    <span class="logo">EnsiBeats</span>
     <ul class="nav-links">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="discover.html">DISCOVER</a></li>
-      <li><a href="charts.html">CHARTS</a></li>
-      <li><a href="pole.html">PÔLE</a></li>
-      <li><a href="profil.html" class="active">MON PROFIL</a></li>
+      <li><a href="music.html">Home</a></li>
+      <li><a href="disc.html">Discover</a></li>
+      <li><a href="charts.html">Charts</a></li>
+      <li><a href="pole.html">Pôle</a></li>
+      <li><a href="profile.html" class="active">Mon Profil</a></li>
     </ul>
   </nav>
 
-  <!-- Subheader — reuses .subheader from music.css -->
-  <div class="subheader">CAMPUSBEATS – MON PROFIL</div>
+  <!-- PAGE HEADER BANNER -->
+  <div class="page-banner">
+    <span class="banner-label">CAMPUSBEATS — MON PROFIL</span>
+  </div>
 
-  <main class="profile-main">
+  <!-- PROFILE WRAPPER -->
+  <div class="profile-wrapper">
 
-    <!-- PROFILE CARD -->
-    <section class="card profile-card">
-      <div class="avatar-wrap">
-        <div class="avatar">🎧</div>
-        <div class="avatar-badge">✨</div>
+    <!-- LEFT COLUMN -->
+    <aside class="profile-sidebar">
+
+      <!-- Avatar Card -->
+      <div class="avatar-card card">
+        <div class="avatar-ring">
+          <div class="avatar-inner">🎧</div>
+        </div>
+        <h2 class="profile-name">Yasmine B.</h2>
+        <p class="profile-handle">@yasmine_beats</p>
+        <div class="profile-badges">
+          <span class="badge badge-gold">⭐ Top Voter</span>
+          <span class="badge badge-lime">🎵 Mélomane</span>
+        </div>
+        <button class="edit-btn">✏️ Modifier le profil</button>
       </div>
-      <div class="profile-info">
-        <!-- reuses .card-title from music.css -->
-        <h1 class="card-title">Alex Dupont</h1>
-        <p class="profile-handle">@alexdup · ENSI Tunis · Promo 2025</p>
-        <div class="profile-tags">
-          <span class="tag tag-pop">Pop</span>
-          <span class="tag tag-rnb">R&amp;B</span>
-          <span class="tag tag-electro">Électro</span>
+
+      <!-- Stats Card -->
+      <div class="stats-card card">
+        <h3 class="card-title">Mes Stats</h3>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <span class="stat-num">42</span>
+            <span class="stat-label">Votes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">17</span>
+            <span class="stat-label">Titres aimés</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">8</span>
+            <span class="stat-label">Playlists</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Semaines actif</span>
+          </div>
         </div>
       </div>
-      <a href="profil.html" class="vote-submit btn-edit">✏️ Modifier</a>
-    </section>
 
-    <!-- STATS ROW -->
-    <section class="stats-row">
-      <div class="card stat-card">
-        <div class="stat-value">47</div>
-        <div class="stat-label">🗳️ Votes donnés</div>
+      <!-- Genre préféré -->
+      <div class="genre-card card">
+        <h3 class="card-title">Genres Favoris</h3>
+        <div class="genre-list">
+          <div class="genre-bar-item">
+            <span class="genre-name">Pop</span>
+            <div class="genre-bar-track"><div class="genre-bar-fill" style="width:78%"></div></div>
+            <span class="genre-pct">78%</span>
+          </div>
+          <div class="genre-bar-item">
+            <span class="genre-name">R&B</span>
+            <div class="genre-bar-track"><div class="genre-bar-fill" style="width:55%"></div></div>
+            <span class="genre-pct">55%</span>
+          </div>
+          <div class="genre-bar-item">
+            <span class="genre-name">Électro</span>
+            <div class="genre-bar-track"><div class="genre-bar-fill" style="width:33%"></div></div>
+            <span class="genre-pct">33%</span>
+          </div>
+          <div class="genre-bar-item">
+            <span class="genre-name">Rock</span>
+            <div class="genre-bar-track"><div class="genre-bar-fill" style="width:20%"></div></div>
+            <span class="genre-pct">20%</span>
+          </div>
+        </div>
       </div>
-      <div class="card stat-card">
-        <div class="stat-value">12</div>
-        <div class="stat-label">🎵 Chansons proposées</div>
+
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <main class="profile-main">
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="liked">❤️ Titres aimés</button>
+        <button class="tab" data-tab="history">🕒 Historique</button>
+        <button class="tab" data-tab="votes">🗳️ Votes</button>
       </div>
-      <div class="card stat-card">
-        <div class="stat-value">3</div>
-        <div class="stat-label">🏆 Pôles gagnés</div>
+
+      <!-- Tab: Liked -->
+      <div class="tab-panel active" id="tab-liked">
+        <div class="track-section-title">🎵 Mes titres favoris</div>
+        <ul class="chart-list">
+          <li class="chart-item">
+            <span class="rank">1</span>
+            <div class="track-info">
+              <div class="track-title">🎸 Shape of You</div>
+              <div class="track-artist">Ed Sheeran · pop</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">2</span>
+            <div class="track-info">
+              <div class="track-title">🌟 Levitating</div>
+              <div class="track-artist">Dua Lipa · pop</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">3</span>
+            <div class="track-info">
+              <div class="track-title">🎵 Blinding Lights</div>
+              <div class="track-artist">The Weeknd · rnb</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">4</span>
+            <div class="track-info">
+              <div class="track-title">🌸 Flowers</div>
+              <div class="track-artist">Miley Cyrus · pop</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">5</span>
+            <div class="track-info">
+              <div class="track-title">⚡ Anti-Hero</div>
+              <div class="track-artist">Taylor Swift · pop</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+        </ul>
       </div>
-      <div class="card stat-card">
-        <div class="stat-value">#8</div>
-        <div class="stat-label">📊 Rang du campus</div>
+
+      <!-- Tab: History -->
+      <div class="tab-panel" id="tab-history">
+        <div class="track-section-title">🕒 Récemment écouté</div>
+        <ul class="chart-list">
+          <li class="chart-item">
+            <span class="rank">—</span>
+            <div class="track-info">
+              <div class="track-title">🎸 Bohemian Rhapsody</div>
+              <div class="track-artist">Queen · rock · il y a 2h</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">—</span>
+            <div class="track-info">
+              <div class="track-title">🌟 Heat Waves</div>
+              <div class="track-artist">Glass Animals · électro · il y a 5h</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">—</span>
+            <div class="track-info">
+              <div class="track-title">🎵 Stay</div>
+              <div class="track-artist">Justin Bieber · pop · hier</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+          <li class="chart-item">
+            <span class="rank">—</span>
+            <div class="track-info">
+              <div class="track-title">🎧 As It Was</div>
+              <div class="track-artist">Harry Styles · pop · hier</div>
+            </div>
+            <button class="play-btn">▶</button>
+          </li>
+        </ul>
       </div>
-    </section>
 
-    <!-- EDIT FORM -->
-    <section class="card">
-      <!-- reuses .card-title from music.css -->
-      <h2 class="card-title">⚙️ Modifier mon profil</h2>
-      <p class="section-sub">Mets à jour tes informations et tes préférences musicales.</p>
-
-      <form class="edit-form" method="GET" action="profil.html">
-
-        <div class="form-group">
-          <label class="form-label" for="username">Nom d'utilisateur</label>
-          <!-- reuses .chart-item look via .form-input -->
-          <input type="text" id="username" name="username" class="form-input" value="Alex Dupont" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="handle">Identifiant (@)</label>
-          <input type="text" id="handle" name="handle" class="form-input" value="@alexdup" />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="promo">Promotion</label>
-          <select id="promo" name="promo" class="form-input">
-            <option>Promo 2025</option>
-            <option>Promo 2026</option>
-            <option>Promo 2027</option>
-            <option>Promo 2028</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Genres préférés</label>
-          <div class="genre-picker">
-
-            <input type="checkbox" id="g-pop"    name="genre" class="genre-check" checked />
-            <label for="g-pop"    class="genre-label">🎤 Pop</label>
-
-            <input type="checkbox" id="g-rnb"    name="genre" class="genre-check" checked />
-            <label for="g-rnb"    class="genre-label">🎙️ R&amp;B</label>
-
-            <input type="checkbox" id="g-electro" name="genre" class="genre-check" checked />
-            <label for="g-electro" class="genre-label">🎧 Électro</label>
-
-            <input type="checkbox" id="g-rock"   name="genre" class="genre-check" />
-            <label for="g-rock"   class="genre-label">🎸 Rock</label>
-
-            <input type="checkbox" id="g-jazz"   name="genre" class="genre-check" />
-            <label for="g-jazz"   class="genre-label">🎷 Jazz</label>
-
-            <input type="checkbox" id="g-afro"   name="genre" class="genre-check" />
-            <label for="g-afro"   class="genre-label">🥁 Afrobeat</label>
-
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="bio">Bio</label>
-          <textarea id="bio" name="bio" class="form-input form-textarea">Passionné de musique, toujours à la recherche de nouveaux sons 🎵</textarea>
-        </div>
-
-        <div class="form-actions">
-          <!-- reuses .vote-submit from music.css -->
-          <button type="submit" class="vote-submit">💾 Sauvegarder</button>
-          <a href="profil.html" class="btn-cancel">Annuler</a>
-        </div>
-
-      </form>
-    </section>
-
-    <!-- VOTE HISTORY — reuses .chart-list / .chart-item / .track-info from music.css -->
-    <section class="card">
-      <h2 class="card-title">🗳️ Mes votes récents</h2>
-      <p class="section-sub">Les chansons pour lesquelles tu as voté cette semaine.</p>
-
-      <ul class="chart-list">
-        <li class="chart-item">
-          <span class="rank">Auj.</span>
-          <div class="track-info">
-            <div class="track-title">🌸 Flowers</div>
-            <div class="track-artist">Miley Cyrus</div>
-          </div>
-          <span class="vote-option-tag">pop</span>
-        </li>
-        <li class="chart-item">
-          <span class="rank">Ven.</span>
-          <div class="track-info">
-            <div class="track-title">🦸 Anti-Hero</div>
-            <div class="track-artist">Taylor Swift</div>
-          </div>
-          <span class="vote-option-tag">pop</span>
-        </li>
-        <li class="chart-item">
-          <span class="rank">Jeu.</span>
-          <div class="track-info">
-            <div class="track-title">🎧 Blinding Lights</div>
-            <div class="track-artist">The Weeknd</div>
-          </div>
-          <span class="vote-option-tag">rnb</span>
-        </li>
-        <li class="chart-item">
-          <span class="rank">Mer.</span>
-          <div class="track-info">
-            <div class="track-title">🌊 As It Was</div>
-            <div class="track-artist">Harry Styles</div>
-          </div>
-          <span class="vote-option-tag">pop</span>
-        </li>
-        <li class="chart-item">
-          <span class="rank">Mar.</span>
-          <div class="track-info">
-            <div class="track-title">🎵 Levitating</div>
-            <div class="track-artist">Dua Lipa</div>
-          </div>
-          <span class="vote-option-tag">pop</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- PROPOSALS — reuses .vote-option from music.css -->
-    <section class="card">
-      <h2 class="card-title">🎵 Mes propositions</h2>
-      <p class="section-sub">Les chansons que tu as soumises pour le pôle.</p>
-
-      <div class="proposals-list">
-
-        <div class="vote-option proposal-accepted">
-          <div class="track-info">
-            <div class="track-title">🌟 Golden Hour · JVKE</div>
-            <div class="track-artist">pop · proposée il y a 2 jours</div>
-          </div>
-          <span class="status-badge status-ok">✅ Acceptée</span>
-        </div>
-
-        <div class="vote-option proposal-pending">
-          <div class="track-info">
-            <div class="track-title">🎸 Running Up That Hill · Kate Bush</div>
-            <div class="track-artist">rock · proposée hier</div>
-          </div>
-          <span class="status-badge status-pending">⏳ En attente</span>
-        </div>
-
-        <div class="vote-option proposal-pending">
-          <div class="track-info">
-            <div class="track-title">🎧 Midnight Rain · Taylor Swift</div>
-            <div class="track-artist">pop · proposée aujourd'hui</div>
-          </div>
-          <span class="status-badge status-pending">⏳ En attente</span>
-        </div>
-
-        <div class="vote-option proposal-refused">
-          <div class="track-info">
-            <div class="track-title">🎵 Blacker the Berry · Kendrick</div>
-            <div class="track-artist">rnb · proposée il y a 5 jours</div>
-          </div>
-          <span class="status-badge status-no">❌ Refusée</span>
-        </div>
-
+      <!-- Tab: Votes -->
+      <div class="tab-panel" id="tab-votes">
+        <div class="track-section-title">🗳️ Mes votes récents</div>
+        <ul class="vote-history-list">
+          <li class="vote-history-item">
+            <div class="vote-meta">
+              <span class="vote-week">Semaine du 31 mars</span>
+              <span class="vote-winner-tag">✅ Gagnant</span>
+            </div>
+            <div class="vote-track">🌸 Flowers — Miley Cyrus</div>
+          </li>
+          <li class="vote-history-item">
+            <div class="vote-meta">
+              <span class="vote-week">Semaine du 24 mars</span>
+              <span class="vote-winner-tag lost">❌ Perdu</span>
+            </div>
+            <div class="vote-track">⚡ Anti-Hero — Taylor Swift</div>
+          </li>
+          <li class="vote-history-item">
+            <div class="vote-meta">
+              <span class="vote-week">Semaine du 17 mars</span>
+              <span class="vote-winner-tag">✅ Gagnant</span>
+            </div>
+            <div class="vote-track">🎸 Shape of You — Ed Sheeran</div>
+          </li>
+          <li class="vote-history-item">
+            <div class="vote-meta">
+              <span class="vote-week">Semaine du 10 mars</span>
+              <span class="vote-winner-tag lost">❌ Perdu</span>
+            </div>
+            <div class="vote-track">🌟 Levitating — Dua Lipa</div>
+          </li>
+        </ul>
       </div>
-    </section>
 
-    <!-- BADGES -->
-    <section class="card">
-      <h2 class="card-title">🏅 Mes badges</h2>
-      <p class="section-sub">Débloque des badges en participant à la vie musicale du campus.</p>
+    </main>
+  </div>
 
-      <div class="badges-grid">
-
-        <div class="badge-card badge-unlocked">
-          <div class="badge-icon">🎵</div>
-          <div class="badge-name">Premier vote</div>
-          <div class="badge-desc">Tu as voté pour la première fois !</div>
-        </div>
-
-        <div class="badge-card badge-unlocked">
-          <div class="badge-icon">🔥</div>
-          <div class="badge-name">7 jours de suite</div>
-          <div class="badge-desc">Voter 7 jours consécutifs</div>
-        </div>
-
-        <div class="badge-card badge-unlocked">
-          <div class="badge-icon">🏆</div>
-          <div class="badge-name">Chanson gagnante</div>
-          <div class="badge-desc">Ta proposition a gagné le pôle</div>
-        </div>
-
-        <div class="badge-card badge-locked">
-          <div class="badge-icon">⭐</div>
-          <div class="badge-name">Top Votant</div>
-          <div class="badge-desc">50 votes donnés au total</div>
-        </div>
-
-        <div class="badge-card badge-locked">
-          <div class="badge-icon">🎤</div>
-          <div class="badge-name">Découvreur</div>
-          <div class="badge-desc">Proposer 20 chansons</div>
-        </div>
-
-        <div class="badge-card badge-locked">
-          <div class="badge-icon">👑</div>
-          <div class="badge-name">Légende ENSI</div>
-          <div class="badge-desc">Atteindre le rang #1 du campus</div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
+  <!-- FOOTER -->
   <footer>
-    <strong>EnsiBeats</strong> · La musique de l'ENSI 🎵
+    <strong>EnsiBeats</strong> — La musique de l'ENSI 🎶
   </footer>
 
+  <!-- TOAST -->
+  <div class="toast" id="toast">✅ Action effectuée !</div>
+
+  <script>
+    // Tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Toast on play
+    document.querySelectorAll('.play-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const title = btn.closest('.chart-item').querySelector('.track-title').textContent;
+        const toast = document.getElementById('toast');
+        toast.textContent = '▶ ' + title;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    });
+  </script>
 </body>
 </html>

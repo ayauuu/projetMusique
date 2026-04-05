@@ -1,515 +1,301 @@
-/* ===========================
-   ENSIBEATS — PROFIL.CSS
-   Zero JavaScript — pure HTML/CSS
-   =========================== */
+/* =============================================
+   PROFILE.CSS — EnsiBeats Mon Profil
+   Works alongside index.css
+   ============================================= */
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --purple:     #c832e0;
-  --green:      #4ccd00;
-  --green-dark: #3aaa00;
-  --pink:       #ff3aaa;
-  --beige:      #f5e9c8;
-  --beige-card: #eee0b0;
-  --yellow-bg:  #fef3c0;
-  --dark:       #1a1a1a;
-  --white:      #fff;
-  --text:       #222;
+/* PAGE BANNER */
+.page-banner {
+  background: var(--lime);
+  padding: .55rem 2rem;
+}
+.banner-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: .12em;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,.15);
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--yellow-bg);
-  color: var(--text);
-  min-height: 100vh;
-}
-
-/* ---- NAVBAR ---- */
-.navbar {
-  background: var(--purple);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  height: 56px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-brand {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  color: var(--white);
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  color: var(--white);
-  text-decoration: none;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  opacity: 0.85;
-  transition: opacity 0.2s;
-}
-
-.nav-links a:hover { opacity: 1; }
-
-.nav-links a.active {
-  opacity: 1;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* ---- SUBHEADER ---- */
-.subheader {
-  background: var(--green);
-  color: var(--white);
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  padding: 10px 2rem;
-}
-
-/* ---- MAIN ---- */
-.main-content {
-  max-width: 860px;
+/* PROFILE WRAPPER — two-column layout */
+.profile-wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.4rem;
+  padding: 1.4rem 1.5rem 2.5rem;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  align-items: start;
+}
+
+/* ---- SIDEBAR ---- */
+.profile-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.2rem;
 }
 
-/* ---- SECTION TITLES ---- */
-.section-title {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  color: var(--pink);
-  margin-bottom: 0.3rem;
-}
-
-.section-sub {
-  font-size: 0.82rem;
-  color: #777;
-  margin-bottom: 1rem;
-}
-
-/* ---- PROFILE CARD ---- */
-.profile-card {
-  background: var(--green);
-  border-radius: 20px;
-  padding: 1.8rem 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  color: var(--white);
-}
-
-.avatar-wrap {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.avatar {
-  width: 80px;
-  height: 80px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.4rem;
-  border: 3px solid rgba(255,255,255,0.5);
-}
-
-.avatar-badge {
-  position: absolute;
-  bottom: 2px;
-  right: 2px;
-  background: var(--pink);
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  border: 2px solid var(--white);
-}
-
-.profile-info { flex: 1; }
-
-.profile-name {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 1.6rem;
-  line-height: 1.1;
-}
-
-.profile-handle {
-  font-size: 0.82rem;
-  opacity: 0.85;
-  margin: 4px 0 10px;
-}
-
-.profile-tags {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.tag {
-  border-radius: 20px;
-  padding: 3px 12px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 0.75rem;
-  color: var(--white);
-}
-
-.tag-pop     { background: var(--pink); }
-.tag-rnb     { background: var(--purple); }
-.tag-electro { background: #ff8c00; }
-.tag-rock    { background: #2266cc; }
-.tag-jazz    { background: #cc7700; }
-.tag-afro    { background: #008855; }
-
-.btn-edit {
-  background: var(--white);
-  color: var(--green-dark);
-  border-radius: 24px;
-  padding: 0.6rem 1.4rem;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 0.88rem;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
-  white-space: nowrap;
-  align-self: flex-start;
-}
-
-.btn-edit:hover {
-  background: var(--yellow-bg);
-  transform: scale(1.04);
-}
-
-/* ---- STATS ROW ---- */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.stat-card {
-  background: var(--beige-card);
-  border-radius: 14px;
-  padding: 1.2rem 1rem;
+/* Avatar Card */
+.avatar-card {
   text-align: center;
-  transition: transform 0.15s;
+  padding: 2rem 1.4rem 1.6rem;
+  animation-delay: .1s;
 }
-
-.stat-card:hover { transform: translateY(-3px); }
-
-.stat-value {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 2rem;
-  color: var(--pink);
+.avatar-ring {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--accent), var(--lime));
+  padding: 3px;
+  box-shadow: 0 4px 18px rgba(248, 59, 195, .35);
+}
+.avatar-inner {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  background: var(--surface2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.4rem;
+}
+.profile-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: .06em;
+  color: var(--text);
   line-height: 1;
 }
-
-.stat-label {
-  font-size: 0.75rem;
-  color: #777;
-  margin-top: 6px;
-  font-weight: 600;
+.profile-handle {
+  font-size: .78rem;
+  color: var(--muted);
+  margin-top: .2rem;
+  margin-bottom: .85rem;
 }
-
-/* ---- EDIT FORM ---- */
-.edit-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+.profile-badges {
+  display: flex; flex-wrap: wrap; gap: .4rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.form-label {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 0.88rem;
-  color: var(--text);
-}
-
-.form-input {
-  background: var(--beige-card);
-  border: 2px solid var(--beige);
-  border-radius: 14px;
-  padding: 0.7rem 1.1rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.88rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.2s;
-  width: 100%;
-}
-
-.form-input:focus { border-color: var(--pink); }
-
-.form-select { cursor: pointer; }
-
-.form-textarea {
-  resize: vertical;
-  min-height: 90px;
-  border-radius: 14px;
-}
-
-/* ---- CHECKBOX GROUP (genre picker) ---- */
-.checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-/* Hide native checkboxes */
-.genre-check {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  width: 0; height: 0;
-}
-
-.genre-label {
-  background: var(--beige-card);
-  border: 2px solid var(--beige);
-  border-radius: 20px;
-  padding: 6px 16px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 0.82rem;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s, transform 0.12s;
-  user-select: none;
-}
-
-.genre-label:hover {
-  border-color: var(--pink);
-  transform: scale(1.04);
-}
-
-/* Checked state: filled pink pill */
-.genre-check:checked + .genre-label {
-  background: var(--pink);
-  border-color: var(--pink);
-  color: var(--white);
-}
-
-/* ---- FORM ACTIONS ---- */
-.form-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-top: 0.4rem;
-}
-
-.btn-save {
-  background: var(--pink);
-  color: var(--white);
-  border: none;
-  border-radius: 24px;
-  padding: 0.7rem 2rem;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.btn-save:hover {
-  background: var(--purple);
-  transform: scale(1.04);
-}
-
-.btn-cancel {
-  color: #888;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.btn-cancel:hover { color: var(--text); }
-
-/* ---- VOTE HISTORY ---- */
-.history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-.history-item {
-  background: var(--beige-card);
-  border-radius: 12px;
-  padding: 0.85rem 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.history-date {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 0.82rem;
-  color: #888;
-  min-width: 90px;
-}
-
-.history-song {
-  flex: 1;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 0.92rem;
-}
-
-.badge-genre {
-  background: var(--beige);
-  border: 1.5px solid #ccc;
-  border-radius: 20px;
-  padding: 2px 10px;
-  font-size: 0.72rem;
+.badge {
+  display: inline-block;
+  padding: .22rem .75rem;
+  border-radius: 999px;
+  font-size: .7rem;
   font-weight: 700;
-  color: #555;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.badge-gold {
+  background: rgba(200,150,10,.12);
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+}
+.badge-lime {
+  background: rgba(145,223,49,.15);
+  border: 1.5px solid var(--lime-dark);
+  color: var(--lime-dark);
+}
+.edit-btn {
+  width: 100%;
+  padding: .55rem;
+  border: 2px solid var(--accent);
+  background: transparent;
+  border-radius: 8px;
+  color: var(--accent);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .15s;
+  letter-spacing: .04em;
+}
+.edit-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.02);
 }
 
-/* ---- PROPOSALS ---- */
-.proposals-list {
+/* Stats Card */
+.stats-card { animation-delay: .2s; }
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .7rem;
+  margin-top: .2rem;
+}
+.stat-item {
+  background: var(--surface2);
+  border-radius: 8px;
+  padding: .75rem .5rem;
+  text-align: center;
+  transition: background .2s, transform .15s;
+}
+.stat-item:hover {
+  background: #fff;
+  transform: scale(1.03);
+}
+.stat-num {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  display: block;
+  font-size: .68rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: .2rem;
+}
+
+/* Genre Card */
+.genre-card { animation-delay: .3s; }
+.genre-list {
+  display: flex; flex-direction: column; gap: .65rem;
+  margin-top: .4rem;
+}
+.genre-bar-item {
+  display: flex; align-items: center; gap: .6rem;
+}
+.genre-name {
+  font-size: .75rem;
+  font-weight: 600;
+  min-width: 48px;
+  color: var(--text);
+}
+.genre-bar-track {
+  flex: 1;
+  height: 7px;
+  background: var(--surface2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.genre-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--lime));
+  border-radius: 999px;
+  animation: barGrow .8s ease .4s both;
+  transform-origin: left;
+}
+@keyframes barGrow {
+  from { width: 0% !important; }
+}
+.genre-pct {
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--lime-dark);
+  min-width: 30px;
+  text-align: right;
+}
+
+/* ---- MAIN CONTENT ---- */
+.profile-main {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0;
 }
 
-.proposal-item {
-  border-radius: 12px;
-  padding: 0.9rem 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+/* Tabs */
+.tabs {
+  display: flex; gap: .5rem;
+  margin-bottom: -.2rem;
   flex-wrap: wrap;
 }
-
-.proposal-accepted { background: #d4ffd4; border: 2px solid var(--green); }
-.proposal-pending  { background: var(--beige-card); border: 2px solid var(--beige); }
-.proposal-refused  { background: #ffe0e0; border: 2px solid #ffaaaa; }
-
-.proposal-info { flex: 1; }
-
-.proposal-name {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 0.92rem;
+.tab {
+  padding: .55rem 1.2rem;
+  border: 2px solid var(--lime);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: var(--surface2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--muted);
+  transition: background .2s, color .2s;
+  letter-spacing: .03em;
+}
+.tab:hover { background: #fff; color: var(--text); }
+.tab.active {
+  background: var(--surface);
+  color: var(--accent);
+  border-color: var(--lime);
 }
 
-.proposal-artist { font-size: 0.75rem; color: #777; margin-top: 2px; }
+/* Tab Panels */
+.tab-panel {
+  display: none;
+  background: var(--surface);
+  border: 2px solid var(--lime);
+  border-radius: 0 12px 12px 12px;
+  padding: 1.4rem;
+  animation: fadeUp .35s ease both;
+}
+.tab-panel.active { display: block; }
 
-.proposal-status {
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 0.78rem;
-  white-space: nowrap;
+.track-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: .1em;
+  color: var(--accent);
+  margin-bottom: .85rem;
 }
 
-.status-ok      { background: var(--green);   color: var(--white); }
-.status-pending { background: #ffcc00;        color: #333; }
-.status-no      { background: #ff5555;        color: var(--white); }
-
-/* ---- BADGES GRID ---- */
-.badges-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+/* Vote History */
+.vote-history-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: .5rem;
 }
-
-.badge-card {
-  border-radius: 16px;
-  padding: 1.3rem 1rem;
-  text-align: center;
-  transition: transform 0.15s;
+.vote-history-item {
+  background: var(--surface2);
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  transition: background .2s, border-color .2s, transform .15s;
 }
-
-.badge-card:hover { transform: translateY(-3px); }
-
-.badge-unlocked {
-  background: var(--beige-card);
-  border: 2px solid var(--green);
+.vote-history-item:hover {
+  background: #fff;
+  border-color: var(--lime);
+  transform: translateX(4px);
 }
-
-.badge-locked {
-  background: #f0f0f0;
-  border: 2px dashed #ccc;
-  opacity: 0.55;
-  filter: grayscale(0.4);
+.vote-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: .25rem;
 }
-
-.badge-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.vote-week {
+  font-size: .72rem;
+  color: var(--muted);
+  font-weight: 600;
 }
-
-.badge-name {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  font-size: 0.88rem;
+.vote-winner-tag {
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--lime-dark);
+  background: rgba(145,223,49,.15);
+  border: 1px solid var(--lime);
+  border-radius: 999px;
+  padding: .15rem .55rem;
+}
+.vote-winner-tag.lost {
+  color: var(--accent);
+  background: rgba(248,59,195,.08);
+  border-color: var(--accent);
+}
+.vote-track {
+  font-size: .84rem;
+  font-weight: 600;
   color: var(--text);
-  margin-bottom: 4px;
 }
 
-.badge-desc {
-  font-size: 0.72rem;
-  color: #888;
-  line-height: 1.3;
-}
-
-.badge-locked .badge-icon::after {
-  content: " 🔒";
-  font-size: 0.9rem;
-}
-
-/* ---- RESPONSIVE ---- */
-@media (max-width: 680px) {
-  .navbar { padding: 0 1rem; }
-  .nav-links { gap: 1rem; }
-  .nav-links a { font-size: 0.75rem; }
-  .main-content { padding: 1.2rem 1rem 3rem; }
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .badges-grid { grid-template-columns: repeat(2, 1fr); }
-  .profile-card { flex-direction: column; text-align: center; }
-  .profile-tags { justify-content: center; }
-  .btn-edit { align-self: center; }
-  .history-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
-}
-
-@media (max-width: 400px) {
-  .badges-grid { grid-template-columns: 1fr 1fr; }
-  .stats-row { grid-template-columns: 1fr 1fr; }
+/* Responsive */
+@media (max-width: 720px) {
+  .profile-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .profile-sidebar {
+    flex-direction: column;
+  }
+  .tabs { gap: .35rem; }
+  .tab { font-size: .75rem; padding: .45rem .85rem; }
 }
