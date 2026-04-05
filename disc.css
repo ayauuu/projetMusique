@@ -1,6 +1,5 @@
-/* ── PAGE HEADER ── */
 .page-header {
-  background: var(--footer); /* violet */
+  background: var(--footer);
   padding: .6rem 1.5rem;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.1rem;
@@ -8,7 +7,6 @@
   color: #fff;
 }
 
-/* ── DISCOVER LAYOUT ── */
 .discover-wrap {
   padding: 1.5rem;
   max-width: 640px;
@@ -23,8 +21,6 @@
   align-items: center;
   gap: .5rem;
 }
-
-/* ── GENRE GRID ── */
 .genre-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,7 +171,6 @@
   background: var(--accent);
   color: #fff;
 }
-
 .profile-count {
   margin-top: .8rem;
   font-size: .8rem;

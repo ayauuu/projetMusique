@@ -1,101 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CampusBeats — Discover</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="music.css">
-  <link rel="stylesheet" href="disc.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBeats — Discover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="disc.css">
 </head>
 <body>
-
-  <nav>
-    <div class="logo">EnsiBeats</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="disc.html" class="active">Discover</a></li>
-      <li><a href="charts.html">Charts</a></li>
-      <li><a href="pole.html">Pôle</a></li>
-      <li><a href="#">Mon Profil</a></li>
-    </ul>
-  </nav>
-
-  <div class="page-header">CampusBeats — Discover</div>
-
-  <div class="discover-wrap">
-
-    <div class="section-title">🔍 Découvrir les styles musicaux</div>
-
-    <div class="genre-grid">
-      <button class="genre-btn rock active" data-genre="rock">🎸 Rock</button>
-      <button class="genre-btn jazz"      data-genre="jazz">🎹 Jazz</button>
-      <button class="genre-btn rnb"       data-genre="rnb">🎤 R&amp;B</button>
-      <button class="genre-btn electro"   data-genre="electro">🎧 Électro</button>
-      <button class="genre-btn classique" data-genre="classique">🎻 Classique</button>
-      <button class="genre-btn afrobeat"  data-genre="afrobeat">🥁 Afrobeat</button>
+    <nav>
+        <div class="logo">EnsiBeats</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="disc.html" class="active">Discover</a></li>
+            <li><a href="charts.html">Charts</a></li>
+            <li><a href="pole.html">Pôle</a></li>
+            <li><a href="#">Mon Profil</a></li>
+        </ul>
+    </nav>
+    <div class="page-header">EnsiBeats — Discover</div>
+    <div class="discover-wrap">
+        <div class="section-title">🔍 Découvrir les styles musicaux</div>
+        <div class="genre-grid">
+            <button class="genre-btn rock active" data-genre="rock">🎸 Rock</button>
+            <button class="genre-btn jazz" data-genre="jazz">🎹 Jazz</button>
+            <button class="genre-btn rnb" data-genre="rnb">🎤 R&amp;B</button>
+            <button class="genre-btn electro" data-genre="electro">🎧 Électro</button>
+            <button class="genre-btn classique" data-genre="classique">🎻 Classique</button>
+            <button class="genre-btn afrobeat" data-genre="afrobeat">🥁 Afrobeat</button>
+        </div>
+        <div class="genre-panel open" id="genrePanel" style="display: block;">
+            <div class="genre-panel-title" id="genrePanelTitle">🎸 Rock</div>
+            <ul class="genre-tracks" id="genreTracks">
+                <li class="genre-track-item">
+                    <div class="t-info">
+                        <div class="t-title">🎸 Bohemian Rhapsody</div>
+                        <div class="t-artist">Queen</div>
+                    </div>
+                    <button class="t-play">▶</button>
+                </li>
+                <li class="genre-track-item">
+                    <div class="t-info">
+                        <div class="t-title">🎸 Smells Like Teen Spirit</div>
+                        <div class="t-artist">Nirvana</div>
+                    </div>
+                    <button class="t-play">▶</button>
+                </li>
+                <li class="genre-track-item">
+                    <div class="t-info">
+                        <div class="t-title">🎸 Back In Black</div>
+                        <div class="t-artist">AC/DC</div>
+                    </div>
+                    <button class="t-play">▶</button>
+                </li>
+                <li class="genre-track-item">
+                    <div class="t-info">
+                        <div class="t-title">🎸 Hotel California</div>
+                        <div class="t-artist">Eagles</div>
+                    </div>
+                    <button class="t-play">▶</button>
+                </li>
+            </ul>
+            <div class="profile-count" id="profileCount">👥 142 étudiants écoutent ce style sur le campus</div>
+        </div>
+        <a href="profile.html" class="profiles-link">tu peut voir votre profile en cliquant ici →</a>
     </div>
-
-    <div class="genre-panel open" id="genrePanel" style="display: block;">
-      <div class="genre-panel-title" id="genrePanelTitle">🎸 Rock</div>
-      
-      <ul class="genre-tracks" id="genreTracks">
-        <li class="genre-track-item">
-          <div class="t-info">
-            <div class="t-title">🎸 Bohemian Rhapsody</div>
-            <div class="t-artist">Queen</div>
-          </div>
-          <button class="t-play">▶</button>
-        </li>
-        <li class="genre-track-item">
-          <div class="t-info">
-            <div class="t-title">🎸 Smells Like Teen Spirit</div>
-            <div class="t-artist">Nirvana</div>
-          </div>
-          <button class="t-play">▶</button>
-        </li>
-        <li class="genre-track-item">
-          <div class="t-info">
-            <div class="t-title">🎸 Back In Black</div>
-            <div class="t-artist">AC/DC</div>
-          </div>
-          <button class="t-play">▶</button>
-        </li>
-        <li class="genre-track-item">
-          <div class="t-info">
-            <div class="t-title">🎸 Hotel California</div>
-            <div class="t-artist">Eagles</div>
-          </div>
-          <button class="t-play">▶</button>
-        </li>
-      </ul>
-
-      <div class="profile-count" id="profileCount">👥 142 étudiants écoutent ce style sur le campus</div>
+    <div class="mini-player visible" id="miniPlayer">
+        <div class="player-thumb" id="playerThumb">🎸</div>
+        <div class="player-info">
+            <div class="player-title" id="playerTitle">🎸 Bohemian Rhapsody</div>
+            <div class="player-artist" id="playerArtist">Queen</div>
+            <div class="progress-wrap">
+                <div class="progress-fill" id="progressFill" style="width: 35%;"></div>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="ctrl-btn" id="prevBtn">⏮</button>
+            <button class="ctrl-btn play-pause" id="playPauseBtn">▶</button>
+            <button class="ctrl-btn" id="nextBtn">⏭</button>
+        </div>
     </div>
-
-    <a href="#" class="profiles-link">Profils étudiants qui écoutent ce style →</a>
-
-  </div>
-
-  <div class="mini-player visible" id="miniPlayer">
-    <div class="player-thumb" id="playerThumb">🎸</div>
-    <div class="player-info">
-      <div class="player-title" id="playerTitle">🎸 Bohemian Rhapsody</div>
-      <div class="player-artist" id="playerArtist">Queen</div>
-      <div class="progress-wrap">
-        <div class="progress-fill" id="progressFill" style="width: 35%;"></div>
-      </div>
-    </div>
-    <div class="player-controls">
-      <button class="ctrl-btn" id="prevBtn">⏮</button>
-      <button class="ctrl-btn play-pause" id="playPauseBtn">▶</button>
-      <button class="ctrl-btn" id="nextBtn">⏭</button>
-    </div>
-  </div>
-
-  <footer>© 2026 <strong>CampusBeats</strong> — Club Musique Faculté</footer>
-
-  <div class="toast" id="toast"></div>
-
+    <footer>© 2026 <strong>CampusBeats</strong> — Club Musique Faculté---Aya Abbassi---Abdel Karim Doudey---</footer>
 </body>
 </html>

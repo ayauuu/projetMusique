@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="profile.css"/>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav>
     <span class="logo">EnsiBeats</span>
     <ul class="nav-links">
@@ -23,19 +21,11 @@
       <li><a href="profile.html" class="active">Mon Profil</a></li>
     </ul>
   </nav>
-
-  <!-- PAGE HEADER BANNER -->
   <div class="page-banner">
     <span class="banner-label">CAMPUSBEATS — MON PROFIL</span>
   </div>
-
-  <!-- PROFILE WRAPPER -->
   <div class="profile-wrapper">
-
-    <!-- LEFT COLUMN -->
     <aside class="profile-sidebar">
-
-      <!-- Avatar Card -->
       <div class="avatar-card card">
         <div class="avatar-ring">
           <div class="avatar-inner">🎧</div>
@@ -48,8 +38,6 @@
         </div>
         <button class="edit-btn">✏️ Modifier le profil</button>
       </div>
-
-      <!-- Stats Card -->
       <div class="stats-card card">
         <h3 class="card-title">Mes Stats</h3>
         <div class="stat-grid">
@@ -71,8 +59,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Genre préféré -->
       <div class="genre-card card">
         <h3 class="card-title">Genres Favoris</h3>
         <div class="genre-list">
@@ -100,18 +86,12 @@
       </div>
 
     </aside>
-
-    <!-- RIGHT COLUMN -->
     <main class="profile-main">
-
-      <!-- Tabs -->
       <div class="tabs">
         <button class="tab active" data-tab="liked">❤️ Titres aimés</button>
         <button class="tab" data-tab="history">🕒 Historique</button>
         <button class="tab" data-tab="votes">🗳️ Votes</button>
       </div>
-
-      <!-- Tab: Liked -->
       <div class="tab-panel active" id="tab-liked">
         <div class="track-section-title">🎵 Mes titres favoris</div>
         <ul class="chart-list">
@@ -157,8 +137,6 @@
           </li>
         </ul> 
       </div>
-
-      <!-- Tab: History -->
       <div class="tab-panel" id="tab-history">
         <div class="track-section-title">🕒 Récemment écouté</div>
         <ul class="chart-list">
@@ -196,8 +174,6 @@
           </li>
         </ul>
       </div>
-
-      <!-- Tab: Votes -->
       <div class="tab-panel" id="tab-votes">
         <div class="track-section-title">🗳️ Mes votes récents</div>
         <ul class="vote-history-list">
@@ -234,17 +210,11 @@
 
     </main>
   </div>
-
-  <!-- FOOTER -->
   <footer>
     <strong>EnsiBeats</strong> — La musique de l'ENSI 🎶
   </footer>
-
-  <!-- TOAST -->
   <div class="toast" id="toast">✅ Action effectuée !</div>
-
   <script>
-    // Tabs
     document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -253,8 +223,6 @@
         document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
       });
     });
-
-    // Toast on play
     document.querySelectorAll('.play-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const title = btn.closest('.chart-item').querySelector('.track-title').textContent;

@@ -1,9 +1,4 @@
-/* =============================================
-   PROFILE.CSS — EnsiBeats Mon Profil
-   Works alongside index.css
-   ============================================= */
 
-/* PAGE BANNER */
 .page-banner {
   background: var(--lime);
   padding: .55rem 2rem;
@@ -15,8 +10,6 @@
   color: #fff;
   text-shadow: 0 1px 4px rgba(0,0,0,.15);
 }
-
-/* PROFILE WRAPPER — two-column layout */
 .profile-wrapper {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -26,15 +19,11 @@
   margin: 0 auto;
   align-items: start;
 }
-
-/* ---- SIDEBAR ---- */
 .profile-sidebar {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-
-/* Avatar Card */
 .avatar-card {
   text-align: center;
   padding: 2rem 1.4rem 1.6rem;

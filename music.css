@@ -15,7 +15,6 @@
   --muted: #666;
   --gold: #c8960a;
 }
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -24,8 +23,6 @@ body {
   overflow-x: hidden;
 
 }
-
-/* NAV */
 nav {
   position: sticky; top: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -33,8 +30,6 @@ nav {
   height: 56px;
   background: var(--nav);
   box-shadow: 0 3px 12px rgba(232,49,74,.35);
-  scroll-behavior: smooth;
-
 }
 .logo {
   font-family: 'Bebas Neue', sans-serif;
@@ -66,7 +61,6 @@ nav {
 .nav-links a:hover, .nav-links a.active { color: #fff; }
 .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
 
-/* HERO */
 .hero {
   background: var(--surface);
   border: 2px solid var(--lime);
@@ -121,7 +115,6 @@ nav {
   animation: fadeUp .6s ease .2s both;
 }
 
-/* EQ BARS */
 .eq-bars {
   display: flex; align-items: flex-end; gap: 4px;
   height: 36px; justify-content: center; margin-top: 1.2rem;
@@ -136,16 +129,12 @@ nav {
   from { height: 5px; opacity: .3; }
   to { height: var(--h, 28px); opacity: 1; }
 }
-
-/* MAIN GRID */
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
   padding: 1rem 1.5rem 2rem;
 }
-
-/* CARDS */
 .card {
   background: var(--surface);
   border: 2px solid var(--lime);
@@ -165,7 +154,6 @@ nav {
   margin-bottom: 1rem;
 }
 
-/* CHART LIST */
 .chart-list { list-style: none; display: flex; flex-direction: column; gap: .45rem; }
 .chart-item {
   display: flex; align-items: center; gap: .75rem;
@@ -203,8 +191,6 @@ nav {
 }
 .play-btn:hover { background: var(--accent); color: #fff; transform: scale(1.1); }
 .chart-item.playing .play-btn { background: var(--accent); color: #fff; }
-
-/* VOTE CARD */
 .vote-title-box {
   background: var(--text);
   border-radius: 10px;

@@ -8,8 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-brand">ENSIBEATS</div>
     <ul class="nav-links">
@@ -20,26 +18,16 @@
       <li><a href="profile.html">MON PROFIL</a></li>
     </ul>
   </nav>
-
-  <!-- GREEN SUBHEADER -->
-  <div class="subheader">CAMPUSBEATS – PÔLE DU JOUR</div>
-
-  <!-- MAIN -->
+  <div class="subheader">ENSIBEATS – PÔLE DU JOUR</div>
   <main class="main-content">
-
-    <!-- VOTE SECTION -->
     <section class="vote-section">
       <h2 class="section-title">🎯 Vote pour la chanson du jour !</h2>
       <p class="section-sub">1 vote par personne · résultats en direct · réinitialisation à minuit</p>
-
       <div class="vote-banner">
         <span>🗳️ VOTEZ POUR LA CHANSON DU JOUR !</span>
         <small>1 vote par personne · résultats en direct</small>
       </div>
-
-      <!-- Pure CSS voting with radio inputs -->
       <div class="vote-form">
-
         <input type="radio" name="vote" id="v1" class="vote-radio" />
         <label for="v1" class="vote-item">
           <div class="vote-item-left">
@@ -52,7 +40,6 @@
           <span class="vote-btn-label">Voter</span>
           <span class="voted-label">✅ Voté !</span>
         </label>
-
         <input type="radio" name="vote" id="v2" class="vote-radio" />
         <label for="v2" class="vote-item">
           <div class="vote-item-left">
@@ -107,11 +94,8 @@
 
       </div>
     </section>
-
-    <!-- RESULTS -->
     <section class="results-section">
       <h2 class="section-title">📊 Résultats en direct</h2>
-
       <div class="result-item" style="--pct: 82%">
         <div class="result-bar-fill"></div>
         <div class="result-rank">🥇</div>
@@ -121,7 +105,6 @@
         </div>
         <div class="result-votes">▲ 87</div>
       </div>
-
       <div class="result-item" style="--pct: 68%">
         <div class="result-bar-fill"></div>
         <div class="result-rank">🥈</div>
@@ -131,7 +114,6 @@
         </div>
         <div class="result-votes">▲ 72</div>
       </div>
-
       <div class="result-item" style="--pct: 60%">
         <div class="result-bar-fill"></div>
         <div class="result-rank">🥉</div>
@@ -141,7 +123,6 @@
         </div>
         <div class="result-votes">▲ 64</div>
       </div>
-
       <div class="result-item" style="--pct: 50%">
         <div class="result-bar-fill"></div>
         <div class="result-rank">4.</div>
@@ -151,7 +132,6 @@
         </div>
         <div class="result-votes">▲ 53</div>
       </div>
-
       <div class="result-item" style="--pct: 46%">
         <div class="result-bar-fill"></div>
         <div class="result-rank">5.</div>
@@ -161,14 +141,10 @@
         </div>
         <div class="result-votes">▲ 49</div>
       </div>
-
     </section>
-
-    <!-- PROPOSE A SONG -->
     <section class="propose-section">
       <h2 class="section-title">🎵 Proposer une chanson</h2>
       <p class="section-sub">Tu veux voir ta chanson dans le pôle de demain ? Propose-la ici !</p>
-
       <form class="propose-form" method="GET" action="pole.html">
         <input type="text" name="titre"   placeholder="Titre de la chanson..." class="propose-input" required />
         <input type="text" name="artiste" placeholder="Artiste..."             class="propose-input" required />
@@ -185,46 +161,36 @@
         <button type="submit" class="btn-propose">🚀 Proposer</button>
       </form>
     </section>
-
-    <!-- HISTORY -->
     <section class="history-section">
       <h2 class="section-title">🏆 Palmarès des derniers jours</h2>
       <div class="history-list">
-
         <div class="history-item">
           <span class="history-date">Vendredi</span>
           <span class="history-song">🎵 Flowers · Miley Cyrus</span>
           <span class="history-votes">🔥 342 votes</span>
         </div>
-
         <div class="history-item">
           <span class="history-date">Jeudi</span>
           <span class="history-song">🎵 Anti-Hero · Taylor Swift</span>
           <span class="history-votes">🔥 289 votes</span>
         </div>
-
         <div class="history-item">
           <span class="history-date">Mercredi</span>
           <span class="history-song">🎵 As It Was · Harry Styles</span>
           <span class="history-votes">🔥 315 votes</span>
         </div>
-
         <div class="history-item">
           <span class="history-date">Mardi</span>
           <span class="history-song">🎵 Blinding Lights · The Weeknd</span>
           <span class="history-votes">🔥 401 votes</span>
         </div>
-
         <div class="history-item">
           <span class="history-date">Lundi</span>
           <span class="history-song">🎵 Heat Waves · Glass Animals</span>
           <span class="history-votes">🔥 278 votes</span>
         </div>
-
       </div>
     </section>
-
   </main>
-
 </body>
 </html>
