@@ -84,8 +84,8 @@
           </div>
         </div>
       </div>
-
     </aside>
+
     <main class="profile-main">
       <div class="tabs">
         <button class="tab active" data-tab="liked">❤️ Titres aimés</button>
@@ -133,10 +133,11 @@
               <div class="track-title">⚡ Anti-Hero</div>
               <div class="track-artist">Taylor Swift · pop</div>
             </div>
-            <button class="play-btn">▶</button> Justin Bieber
+            <button class="play-btn">▶</button>
           </li>
         </ul> 
       </div>
+
       <div class="tab-panel" id="tab-history">
         <div class="track-section-title">🕒 Récemment écouté</div>
         <ul class="chart-list">
@@ -174,6 +175,7 @@
           </li>
         </ul>
       </div>
+
       <div class="tab-panel" id="tab-votes">
         <div class="track-section-title">🗳️ Mes votes récents</div>
         <ul class="vote-history-list">
@@ -207,31 +209,11 @@
           </li>
         </ul>
       </div>
-
     </main>
   </div>
   <footer>
     <strong>EnsiBeats</strong> — La musique de l'ENSI 🎶
   </footer>
   <div class="toast" id="toast">✅ Action effectuée !</div>
-  <script>
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-      });
-    });
-    document.querySelectorAll('.play-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const title = btn.closest('.chart-item').querySelector('.track-title').textContent;
-        const toast = document.getElementById('toast');
-        toast.textContent = '▶ ' + title;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2500);
-      });
-    });
-  </script>
 </body>
 </html>
