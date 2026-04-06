@@ -415,11 +415,6 @@ footer strong { color: #fff; }
 .spotify-btn:active {
     transform: scale(0.97);
 }
-
-/* ===================================
-   RESPONSIVE
-   =================================== */
-
 @media (max-width: 700px) {
     .spotify-section {
         flex-direction: column;
