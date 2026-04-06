@@ -306,6 +306,7 @@ nav {
 }
 .ctrl-btn.play-pause:hover { background: #c2152f; transform: scale(1.1); }
 
+
 /* FOOTER */
 footer {
   background: var(--footer);
